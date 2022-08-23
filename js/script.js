@@ -2,13 +2,12 @@
     const links = document.querySelectorAll('.titles a');
     console.log('links:', links);
   });*/
-
+'use strict';
 
 const titleClickHandler = function(event){
+  event.preventDefault();
   const clickedElement = this;
   console.log('Link was clicked!');
-  
-
   /* [DONE] remove class 'active' from all article links  */
   const activeLinks = document.querySelectorAll('.titles a.active');
 
@@ -21,9 +20,11 @@ const titleClickHandler = function(event){
 
   /* [DONE] remove class 'active' from all articles */
 
-  /* get 'href' attribute from the clicked link */
-
+  /* get 'href' attribute from the clicked link */  
+  const articleSelector = clickedElement.getAttribute('href');
+  
   /* find the correct article using the selector (value of 'href' attribute) */
+  const targetArticle = document.querySelector('.href');
 
   /* add class 'active' to the correct article */
   }
